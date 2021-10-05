@@ -10,7 +10,7 @@ pipeline {
           stage('Build') {
             steps {
                 script{
-                    welcome.build()
+                    welcome.buildMvn()
                 }
             }
           }
@@ -18,7 +18,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    welcome.buildImage()
+                    welcome.buildImageMvn()
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
       stage("Push image") {
         steps {
                 script {
-                    welcome.pushImage()
+                    welcome.pushImageMvn()
                }
           }
       }
