@@ -42,7 +42,7 @@ pipeline {
                 success {
                     archiveArtifacts 'target/*.jar'
                     sh 'aws configure set region us-east-1'
-                    sh 'aws s3 cp ./target/springbootrestapiexample-11.jar s3://bucketname123321'
+                    sh 'aws s3 cp ./target/springbootrestapiexample-11.jar s3://bucketname123321123'
                 }
           }
       }
